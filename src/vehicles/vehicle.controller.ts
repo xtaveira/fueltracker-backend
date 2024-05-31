@@ -9,10 +9,10 @@ import {
   Put,
   Delete,
 } from '@nestjs/common';
-import { VehicleService } from '../services/vehicle.service';
+import { VehicleService } from './vehicle.service';
 import { Vehicle } from '../models/vehicle.model';
-import { CreateVehicleDto } from '../dtos/create-vehicle.dto';
-import { UpdateVehicleDto } from '../dtos/update-vehicle.dto';
+import { CreateVehicleDto } from '../common/dto/create-vehicle.dto';
+import { UpdateVehicleDto } from '../common/dto/update-vehicle.dto';
 
 @Controller('vehicles')
 export class VehicleController {

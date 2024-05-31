@@ -4,8 +4,8 @@ import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Vehicle } from '../models/vehicle.model';
-import { CreateVehicleDto } from '../dtos/create-vehicle.dto';
-import { UpdateVehicleDto } from '../dtos/update-vehicle.dto';
+import { CreateVehicleDto } from '../common/dto/create-vehicle.dto';
+import { UpdateVehicleDto } from '../common/dto/update-vehicle.dto';
 
 @Injectable()
 export class VehicleService {
