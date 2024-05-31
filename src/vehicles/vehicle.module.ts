@@ -4,11 +4,11 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { VehicleController } from './vehicle.controller';
 import { VehicleService } from './vehicle.service';
-import { Vehicle } from '../models/vehicle.model'; // Importe o modelo Vehicle aqui
+import { Vehicle, VehicleModel } from '../models/vehicle.model';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Vehicle.name, schema: Vehicle }]), // Use Vehicle diretamente como o esquema
+    MongooseModule.forFeature([{ name: Vehicle.name, schema: VehicleModel }]),
   ],
   controllers: [VehicleController],
   providers: [VehicleService],
