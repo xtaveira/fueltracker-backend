@@ -1,73 +1,58 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# FuelTrack Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Este é o backend do projeto FuelTrack, uma aplicação para rastreamento e gerenciamento de consumo de combustível de veículos.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descrição
 
-## Description
+O backend é desenvolvido em Node.js com o framework NestJS e utiliza o banco de dados MongoDB para armazenar dados relacionados a usuários, veículos e registros de reabastecimento. Ele fornece uma API RESTful para interação com o frontend e possui endpoints para autenticação de usuários, gerenciamento de veículos e registros de reabastecimento.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Funcionalidades Principais
 
-## Installation
+- Autenticação de usuários via Google OAuth2
+- CRUD (Create, Read, Update, Delete) de usuários
+- CRUD de veículos
+- CRUD de registros de reabastecimento
+- Validação de dados de entrada utilizando DTOs (Data Transfer Objects)
+- Gerenciamento de dependências utilizando npm e Yarn
 
-```bash
-$ npm install
-```
+## Instalação e Configuração
 
-## Running the app
+1. Clone o repositório: `git clone https://github.com/seu-usuario/fueltrack-backend.git`
+2. Instale as dependências: `npm install` ou `yarn install`
+3. Configure as variáveis de ambiente criando um arquivo `.env` na raiz do projeto. Você pode usar `.env.example` como referência.
+4. Inicie o servidor: `npm start` ou `yarn start`
+5. O servidor estará disponível em `http://localhost:3000` por padrão.
 
-```bash
-# development
-$ npm run start
+## Endpoints da API
 
-# watch mode
-$ npm run start:dev
+A API expõe os seguintes endpoints:
 
-# production mode
-$ npm run start:prod
-```
+- `/auth/google`: Endpoint para autenticação via Google OAuth2.
+- `/users`: Endpoint para CRUD de usuários.
+- `/vehicles`: Endpoint para CRUD de veículos.
+- `/refuels`: Endpoint para CRUD de registros de reabastecimento.
 
-## Test
+Para obter mais detalhes sobre cada endpoint, consulte a documentação da API ou os arquivos de rota e controlador do projeto.
 
-```bash
-# unit tests
-$ npm run test
+## Tecnologias Utilizadas
 
-# e2e tests
-$ npm run test:e2e
+- Node.js
+- NestJS
+- MongoDB
+- Mongoose
+- JWT (JSON Web Tokens)
+- Google OAuth2
+- npm
+- Yarn
 
-# test coverage
-$ npm run test:cov
-```
+## Autor
 
-## Support
+Davi Taveira <a target="_blank" href="https://github.com/xtaveira">GITHUB</a>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Contribuição
 
-## Stay in touch
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests, relatar problemas ou sugerir novas funcionalidades.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Licença
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
