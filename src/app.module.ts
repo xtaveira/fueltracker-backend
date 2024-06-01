@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { DatabaseModule } from './database/database.module';
 import { VehicleModule } from './vehicles/vehicle.module';
 import { UsersModule } from './users/users.module';
+import { RefuelsModule } from './refuels/refuels.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { UsersModule } from './users/users.module';
     DatabaseModule,
     VehicleModule,
     UsersModule,
+    RefuelsModule,
   ],
   controllers: [],
   providers: [],
