@@ -7,9 +7,10 @@ import { AuthService } from './auth.service';
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(private authService: AuthService) {
     super({
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3000/auth/google/callback',
+      clientID:
+        '146221598356-cjkso83957kd2vq425jo8donn3s82i0k.apps.googleusercontent.com',
+      clientSecret: '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',
+      callbackURL: 'http://localhost:3001/auth/google/callback', // Atualizado para a porta do backend
       scope: ['email', 'profile'],
     });
   }

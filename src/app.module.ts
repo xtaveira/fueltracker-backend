@@ -6,6 +6,7 @@ import { DatabaseModule } from './database/database.module';
 import { VehicleModule } from './vehicles/vehicle.module';
 import { UsersModule } from './users/users.module';
 import { RefuelsModule } from './refuels/refuels.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { RefuelsModule } from './refuels/refuels.module';
     VehicleModule,
     UsersModule,
     RefuelsModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
