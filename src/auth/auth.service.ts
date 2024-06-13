@@ -6,12 +6,17 @@ export class AuthService {
   constructor(private readonly jwtService: JwtService) {}
 
   async validateUser(profile: any): Promise<any> {
-    // Aqui você deve validar o usuário e salvar no banco de dados se necessário
-    return { userId: profile.id, username: profile.displayName };
+    const { id, emails, displayName } = profile;
+    const user = {
+      userId: id,
+      email: emails[0].value,
+      name: displayName,
+    };
+    return user;
   }
 
   async login(user: any) {
-    const payload = { username: user.username, sub: user.userId };
+    const payload = { username: user.name, sub: user.userId };
     return {
       access_token: this.jwtService.sign(payload),
     };
