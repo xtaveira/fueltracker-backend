@@ -7,6 +7,7 @@ import { VehicleModule } from './vehicles/vehicle.module';
 import { UsersModule } from './users/users.module';
 import { RefuelsModule } from './refuels/refuels.module';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { AuthModule } from './auth/auth.module';
     UsersModule,
     RefuelsModule,
     AuthModule,
+    ConfigModule.forRoot(),
   ],
   controllers: [],
   providers: [],
